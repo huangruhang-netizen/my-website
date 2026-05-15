@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title data-i18n="title">东南亚厨电源头工厂 | 油烟机·燃气灶·消毒柜 OEM/ODM</title>
+  <meta name="description" data-i18n-attr="content" data-i18n="desc" content="东南亚厨电源头工厂，支持油烟机、燃气灶、消毒柜 OEM/ODM 批量定制。工厂直供，稳定出口。" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;900&family=Noto+Sans+Thai:wght@400;700&family=Noto+Sans:wght@400;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ========== 语言切换浮动按钮 ========== -->
+  <div class="lang-switcher" id="langSwitcher">
+    <button class="lang-toggle" id="langToggle" aria-label="Switch language">
+      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+      <span data-i18n="lang_switch">语言</span>
+    </button>
+    <div class="lang-menu" id="langMenu">
+      <button data-lang="zh" class="lang-option active">中文</button>
+      <button data-lang="en" class="lang-option">English</button>
+      <button data-lang="th" class="lang-option">ภาษาไทย</button>
+      <button data-lang="vi" class="lang-option">Tiếng Việt</button>
+      <button data-lang="id" class="lang-option">Bahasa ID</button>
+    </div>
+  </div>
+
+  <!-- ========== 微信弹窗 ========== -->
+  <div class="modal-overlay" id="wechatModal">
+    <div class="modal-box">
+      <button class="modal-close" id="wechatClose">&times;</button>
+      <div class="modal-icon wechat-color">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8.691 2.188C3.891 2.188 0 5.476 0 9.53c0 2.212 1.17 4.203 3.002 5.55a.59.59 0 01.213.665l-.39 1.48c-.019.07-.048.141-.048.213 0 .163.13.295.29.295a.326.326 0 00.167-.054l1.903-1.114a.864.864 0 01.717-.098 10.16 10.16 0 002.837.403c.276 0 .543-.027.811-.05a6.105 6.105 0 01-.253-1.72c0-3.571 3.326-6.47 7.43-6.47.254 0 .504.013.75.037C16.633 4.762 12.995 2.188 8.691 2.188zM5.785 7.033a1.044 1.044 0 110 2.087 1.044 1.044 0 010-2.087zm5.813 0a1.044 1.044 0 110 2.087 1.044 1.044 0 010-2.087zM24 14.63c0-3.248-3.286-5.883-7.341-5.883-4.055 0-7.341 2.635-7.341 5.883s3.286 5.882 7.341 5.882c.868 0 1.699-.136 2.478-.357a.723.723 0 01.597.082l1.584.926a.272.272 0 00.139.045.241.241 0 00.24-.245c0-.06-.024-.118-.04-.176l-.326-1.233a.49.49 0 01.178-.553C22.965 18.354 24 16.608 24 14.63zm-9.341-1.104a.868.868 0 110 1.735.868.868 0 010-1.735zm4 0a.868.868 0 110 1.735.868.868 0 010-1.735z"/></svg>
+      </div>
+      <h3 data-i18n="wechat_modal_title">微信咨询</h3>
+      <p data-i18n="wechat_modal_desc">扫描二维码或添加微信号：</p>
+      <div class="wechat-qr-placeholder">
+        <span>[ 微信二维码 ]</span>
+      </div>
+      <div class="wechat-id-box">
+        <span>WeChat ID: </span><strong data-i18n="wechat_id">your_wechat_id</strong>
+      </div>
+      <button class="btn btn-primary btn-block modal-close-btn" data-i18n="wechat_modal_close" onclick="closeWechatModal()">关闭</button>
+    </div>
+  </div>
+
+  <!-- ========== 1. 首屏 Hero ========== -->
+  <section id="hero" class="section hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1 class="hero-title"><span data-i18n="hero_title_1">东南亚厨电</span><br/><span class="gold" data-i18n="hero_title_2">出口工厂</span></h1>
+      <p class="hero-sub" data-i18n="hero_sub">油烟机｜燃气灶｜消毒柜｜OEM/ODM定制供应</p>
+      <div class="trust-tags">
+        <span class="tag" data-i18n="tag_factory">工厂直供</span>
+        <span class="tag" data-i18n="tag_custom">支持定制</span>
+        <span class="tag" data-i18n="tag_export">出口东南亚</span>
+      </div>
+      <div class="hero-buttons">
+        <a href="#inquiry" class="btn btn-primary" data-i18n="btn_quote">立即获取报价</a>
+        <a href="https://wa.me/8613800000000" class="btn btn-whatsapp" target="_blank" rel="noopener">
+          <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          <span data-i18n="btn_whatsapp">WhatsApp 咨询</span>
+        </a>
+        <a href="javascript:void(0)" class="btn btn-wechat" onclick="openWechatModal()">
+          <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M8.691 2.188C3.891 2.188 0 5.476 0 9.53c0 2.212 1.17 4.203 3.002 5.55a.59.59 0 01.213.665l-.39 1.48c-.019.07-.048.141-.048.213 0 .163.13.295.29.295a.326.326 0 00.167-.054l1.903-1.114a.864.864 0 01.717-.098 10.16 10.16 0 002.837.403c.276 0 .543-.027.811-.05a6.105 6.105 0 01-.253-1.72c0-3.571 3.326-6.47 7.43-6.47.254 0 .504.013.75.037C16.633 4.762 12.995 2.188 8.691 2.188zM5.785 7.033a1.044 1.044 0 110 2.087 1.044 1.044 0 010-2.087zm5.813 0a1.044 1.044 0 110 2.087 1.044 1.044 0 010-2.087zM24 14.63c0-3.248-3.286-5.883-7.341-5.883-4.055 0-7.341 2.635-7.341 5.883s3.286 5.882 7.341 5.882c.868 0 1.699-.136 2.478-.357a.723.723 0 01.597.082l1.584.926a.272.272 0 00.139.045.241.241 0 00.24-.245c0-.06-.024-.118-.04-.176l-.326-1.233a.49.49 0 01.178-.553C22.965 18.354 24 16.608 24 14.63zm-9.341-1.104a.868.868 0 110 1.735.868.868 0 010-1.735zm4 0a.868.868 0 110 1.735.868.868 0 010-1.735z"/></svg>
+          <span data-i18n="btn_wechat">微信咨询</span>
+        </a>
+        <a href="https://line.me/ti/p/YOUR_LINE_ID" class="btn btn-line" target="_blank" rel="noopener">
+          <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596a.626.626 0 01-.22.04.636.636 0 01-.516-.27l-2.443-3.317v2.95c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.271.173-.508.43-.595a.672.672 0 01.222-.04c.2 0 .394.098.512.27l2.44 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-6.621 0c0 .344-.282.629-.63.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-2.466.629H4.297c-.349 0-.63-.285-.63-.629V8.108c0-.345.281-.63.63-.63.346 0 .627.285.627.63v4.141h1.496c.348 0 .63.285.63.63 0 .344-.282.629-.63.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
+          <span data-i18n="btn_line">LINE 咨询</span>
+        </a>
+        <a href="#products" class="btn btn-outline" data-i18n="btn_catalog">查看产品目录</a>
+      </div>
+    </div>
+    <div class="scroll-hint">
+      <span data-i18n="scroll_hint">下滑了解更多</span>
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- ========== 工厂展示视频 ========== -->
+  <section id="factory-video" class="section factory-video-section">
+    <div class="section-header">
+      <span class="section-label" data-i18n="video_label">FACTORY TOUR</span>
+      <h2 class="section-title"><span data-i18n="video_title_1">走进</span><span class="gold" data-i18n="video_title_2">生产现场</span></h2>
+      <p class="section-desc" data-i18n="video_desc">实地拍摄工厂车间，了解我们的生产实力与品质管控</p>
+    </div>
+    <div class="video-wrapper">
+      <div class="video-container" id="videoContainer">
+        <div class="video-poster" id="videoPoster" onclick="playFactoryVideo()">
+          <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&q=80" alt="Factory Tour" class="video-poster-img" />
+          <div class="video-play-btn">
+            <svg viewBox="0 0 80 80" fill="none">
+              <circle cx="40" cy="40" r="38" stroke="white" stroke-width="3" opacity="0.9"/>
+              <polygon points="32,24 58,40 32,56" fill="white" opacity="0.95"/>
+            </svg>
+          </div>
+          <div class="video-poster-label" data-i18n="video_play">点击播放工厂视频</div>
+        </div>
+        <video id="factoryVideo" controls preload="none" style="display:none;width:100%;border-radius:var(--radius);">
+          <source src="factory-tour.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 2. 产品矩阵区 ========== -->
+  <section id="products" class="section products">
+    <div class="section-header">
+      <span class="section-label" data-i18n="products_label">PRODUCT LINEUP</span>
+      <h2 class="section-title" data-i18n="products_title">核心产品矩阵</h2>
+      <p class="section-desc" data-i18n="products_desc">三大品类覆盖东南亚厨房核心需求</p>
+    </div>
+    <div class="product-card">
+      <div class="product-img" style="background-image: url('https://images.unsplash.com/photo-1714624107079-9925651c396a?w=600&q=80');">
+        <span class="product-badge" data-i18n="badge_hot">热销</span>
+      </div>
+      <div class="product-info">
+        <h3><span data-i18n="product1_name">油烟机</span> <span class="en" data-i18n="product1_en">Range Hood</span></h3>
+        <ul class="selling-points">
+          <li><span class="sp-icon">&#9889;</span> <span data-i18n="product1_sp1">大吸力，适合重油烟烹饪</span></li>
+          <li><span class="sp-icon">&#10024;</span> <span data-i18n="product1_sp2">易清洁，免拆洗设计</span></li>
+          <li><span class="sp-icon">&#128264;</span> <span data-i18n="product1_sp3">低噪音，静享烹饪</span></li>
+        </ul>
+        <a href="#inquiry" class="btn btn-sm" data-i18n="btn_spec">获取参数表</a>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-img" style="background-image: url('https://images.unsplash.com/photo-1733045848849-a2f002fdc1a6?w=600&q=80');">
+        <span class="product-badge" data-i18n="badge_popular">爆款</span>
+      </div>
+      <div class="product-info">
+        <h3><span data-i18n="product2_name">燃气灶</span> <span class="en" data-i18n="product2_en">Gas Stove</span></h3>
+        <ul class="selling-points">
+          <li><span class="sp-icon">&#128293;</span> <span data-i18n="product2_sp1">火力稳定，高效节能</span></li>
+          <li><span class="sp-icon">&#128737;</span> <span data-i18n="product2_sp2">安全熄火保护装置</span></li>
+          <li><span class="sp-icon">&#9881;</span> <span data-i18n="product2_sp3">台式/嵌入式可选</span></li>
+        </ul>
+        <a href="#inquiry" class="btn btn-sm" data-i18n="btn_spec">获取参数表</a>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-img" style="background-image: url('https://images.unsplash.com/photo-1584568694244-14fbdf83bd30?w=600&q=80');">
+        <span class="product-badge" data-i18n="badge_recommend">推荐</span>
+      </div>
+      <div class="product-info">
+        <h3><span data-i18n="product3_name">消毒柜</span> <span class="en" data-i18n="product3_en">Disinfection Cabinet</span></h3>
+        <ul class="selling-points">
+          <li><span class="sp-icon">&#129514;</span> <span data-i18n="product3_sp1">高效杀菌消毒</span></li>
+          <li><span class="sp-icon">&#128230;</span> <span data-i18n="product3_sp2">餐具收纳一体化</span></li>
+          <li><span class="sp-icon">&#127970;</span> <span data-i18n="product3_sp3">家用/商用全适配</span></li>
+        </ul>
+        <a href="#inquiry" class="btn btn-sm" data-i18n="btn_spec">获取参数表</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 3. 东南亚市场适配区 ========== -->
+  <section id="adaptation" class="section adaptation">
+    <div class="section-header">
+      <span class="section-label" data-i18n="adapt_label">MARKET FIT</span>
+      <h2 class="section-title"><span data-i18n="adapt_title_1">专为东南亚厨房</span><br/><span class="gold" data-i18n="adapt_title_2">环境打造</span></h2>
+    </div>
+    <div class="adapt-grid">
+      <div class="adapt-item"><div class="adapt-icon">&#127777;</div><h4 data-i18n="adapt1_title">高温潮湿适配</h4><p data-i18n="adapt1_desc">耐高温防潮材质，适应东南亚气候</p></div>
+      <div class="adapt-item"><div class="adapt-icon">&#127858;</div><h4 data-i18n="adapt2_title">重油烟烹饪</h4><p data-i18n="adapt2_desc">适合煎炸、爆炒等东南亚烹饪方式</p></div>
+      <div class="adapt-item"><div class="adapt-icon">&#128268;</div><h4 data-i18n="adapt3_title">电压插头适配</h4><p data-i18n="adapt3_desc">支持不同国家电压标准与插头规格</p></div>
+      <div class="adapt-item"><div class="adapt-icon">&#127760;</div><h4 data-i18n="adapt4_title">多语言面板</h4><p data-i18n="adapt4_desc">英文/泰文/越南文/印尼文可选</p></div>
+      <div class="adapt-item"><div class="adapt-icon">&#128230;</div><h4 data-i18n="adapt5_title">本地化包装</h4><p data-i18n="adapt5_desc">支持多语言包装与说明书定制</p></div>
+      <div class="adapt-item"><div class="adapt-icon">&#128722;</div><h4 data-i18n="adapt6_title">电商平台适配</h4><p data-i18n="adapt6_desc">Shopee / Lazada / TikTok Shop 销售图</p></div>
+    </div>
+  </section>
+
+  <!-- ========== 4. 工厂实力区 ========== -->
+  <section id="factory" class="section factory">
+    <div class="section-header">
+      <span class="section-label" data-i18n="factory_label">FACTORY STRENGTH</span>
+      <h2 class="section-title"><span data-i18n="factory_title_1">源头工厂</span><br/><span class="gold" data-i18n="factory_title_2">稳定供货</span></h2>
+      <p class="section-desc" data-i18n="factory_desc">交付稳定 · 品控可控 · 支持贴牌 · 响应快</p>
+    </div>
+    <div class="factory-showcase">
+      <div class="factory-item"><div class="factory-img" style="background-image: url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&q=80');"></div><span data-i18n="factory1">生产车间</span></div>
+      <div class="factory-item"><div class="factory-img" style="background-image: url('https://images.unsplash.com/photo-1567789884554-0b844b597180?w=400&q=80');"></div><span data-i18n="factory2">装配线</span></div>
+      <div class="factory-item"><div class="factory-img" style="background-image: url('https://images.unsplash.com/photo-1553413077-190dd305871c?w=400&q=75');"></div><span data-i18n="factory3">仓库管理</span></div>
+      <div class="factory-item"><div class="factory-img" style="background-image: url('https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?w=400&q=80');"></div><span data-i18n="factory4">质检流程</span></div>
+      <div class="factory-item"><div class="factory-img" style="background-image: url('https://images.unsplash.com/photo-1607400201889-565b1ee75f8e?w=400&q=80');"></div><span data-i18n="factory5">包装出货</span></div>
+      <div class="factory-item"><div class="factory-img" style="background-image: url('https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=400&q=80');"></div><span data-i18n="factory6">出口装柜</span></div>
+    </div>
+    <div class="factory-stats">
+      <div class="stat"><span class="stat-num" data-i18n="stat1_num">10000+</span><span class="stat-label" data-i18n="stat1_label">㎡ 工厂面积</span></div>
+      <div class="stat"><span class="stat-num" data-i18n="stat2_num">50000+</span><span class="stat-label" data-i18n="stat2_label">台/月产能</span></div>
+      <div class="stat"><span class="stat-num" data-i18n="stat3_num">20+</span><span class="stat-label" data-i18n="stat3_label">出口国家</span></div>
+      <div class="stat"><span class="stat-num" data-i18n="stat4_num">8+</span><span class="stat-label" data-i18n="stat4_label">年出口经验</span></div>
+    </div>
+  </section>
+
+  <!-- ========== 5. OEM/ODM定制区 ========== -->
+  <section id="oem" class="section oem">
+    <div class="section-header">
+      <span class="section-label" data-i18n="oem_label">CUSTOMIZATION</span>
+      <h2 class="section-title"><span data-i18n="oem_title_1">支持品牌定制</span><br/><span class="gold" data-i18n="oem_title_2">与批量供货</span></h2>
+    </div>
+    <div class="oem-list">
+      <div class="oem-item"><div class="oem-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l2-6h4l2 6M8 12h8M9 15h6"/></svg></div><div><h4 data-i18n="oem1_title">LOGO 定制</h4><p data-i18n="oem1_desc">丝印/激光雕刻/贴标</p></div></div>
+      <div class="oem-item"><div class="oem-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><circle cx="9" cy="9" r="1" fill="currentColor"/><circle cx="15" cy="9" r="1" fill="currentColor"/></svg></div><div><h4 data-i18n="oem2_title">外观颜色定制</h4><p data-i18n="oem2_desc">黑/白/银/拉丝金属等</p></div></div>
+      <div class="oem-item"><div class="oem-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h10"/></svg></div><div><h4 data-i18n="oem3_title">面板语言定制</h4><p data-i18n="oem3_desc">英/泰/越/印尼/马来文</p></div></div>
+      <div class="oem-item"><div class="oem-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 002 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0022 16z"/></svg></div><div><h4 data-i18n="oem4_title">包装盒定制</h4><p data-i18n="oem4_desc">彩箱/中性箱/品牌箱</p></div></div>
+      <div class="oem-item"><div class="oem-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/><path d="M16 13H8M16 17H8M10 9H8"/></svg></div><div><h4 data-i18n="oem5_title">说明书定制</h4><p data-i18n="oem5_desc">多语言版本/品牌设计</p></div></div>
+      <div class="oem-item"><div class="oem-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div><div><h4 data-i18n="oem6_title">电压/插头定制</h4><p data-i18n="oem6_desc">110V-240V / 多国插头</p></div></div>
+      <div class="oem-item"><div class="oem-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20V10M18 20V4M6 20v-4"/></svg></div><div><h4 data-i18n="oem7_title">产品参数定制</h4><p data-i18n="oem7_desc">功率/尺寸/功能按需调整</p></div></div>
+    </div>
+    <a href="#inquiry" class="btn btn-primary btn-block" data-i18n="btn_oem_cta">发送需求，获取定制方案</a>
+  </section>
+
+  <!-- ========== 6. 使用场景区 ========== -->
+  <section id="scenes" class="section scenes">
+    <div class="section-header">
+      <span class="section-label" data-i18n="scene_label">APPLICATION SCENES</span>
+      <h2 class="section-title"><span data-i18n="scene_title_1">多场景</span><span class="gold" data-i18n="scene_title_2">全覆盖</span></h2>
+    </div>
+    <div class="scene-scroll">
+      <div class="scene-card"><div class="scene-img" style="background-image: url('https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&q=80');"></div><div class="scene-label" data-i18n="scene1">家庭厨房</div></div>
+      <div class="scene-card"><div class="scene-img" style="background-image: url('https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=400&q=80');"></div><div class="scene-label" data-i18n="scene2">公寓厨房</div></div>
+      <div class="scene-card"><div class="scene-img" style="background-image: url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=400&q=80');"></div><div class="scene-label" data-i18n="scene3">餐饮小店</div></div>
+      <div class="scene-card"><div class="scene-img" style="background-image: url('https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=400&q=80');"></div><div class="scene-label" data-i18n="scene4">民宿 / 酒店</div></div>
+      <div class="scene-card"><div class="scene-img" style="background-image: url('https://images.unsplash.com/photo-1600566753190-34d3b7af3198?w=400&q=80');"></div><div class="scene-label" data-i18n="scene5">东南亚开放式厨房</div></div>
+    </div>
+  </section>
+
+  <!-- ========== 7. 询盘转化区 ========== -->
+  <section id="inquiry" class="section inquiry">
+    <div class="section-header">
+      <span class="section-label" data-i18n="inquiry_label">GET A QUOTE</span>
+      <h2 class="section-title"><span data-i18n="inquiry_title_1">获取东南亚</span><br/><span class="gold" data-i18n="inquiry_title_2">热销厨电报价单</span></h2>
+    </div>
+    <form class="inquiry-form" id="inquiryForm" onsubmit="handleSubmit(event)">
+      <div class="form-group">
+        <label><span data-i18n="form_name">姓名</span> <span class="required" data-i18n="required">*</span></label>
+        <input type="text" name="name" data-i18n-ph="form_name_ph" placeholder="Your Name" required />
+      </div>
+      <div class="form-group">
+        <label><span data-i18n="form_country">国家/地区</span> <span class="required" data-i18n="required">*</span></label>
+        <select name="country" required>
+          <option value="" data-i18n="form_country_ph">请选择 / Select</option>
+          <option value="Thailand">Thailand 泰国</option>
+          <option value="Vietnam">Vietnam 越南</option>
+          <option value="Indonesia">Indonesia 印尼</option>
+          <option value="Malaysia">Malaysia 马来西亚</option>
+          <option value="Philippines">Philippines 菲律宾</option>
+          <option value="Singapore">Singapore 新加坡</option>
+          <option value="Myanmar">Myanmar 缅甸</option>
+          <option value="Cambodia">Cambodia 柬埔寨</option>
+          <option value="Other">Other 其他</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label><span data-i18n="form_product">采购产品</span> <span class="required" data-i18n="required">*</span></label>
+        <div class="checkbox-group">
+          <label class="checkbox-label"><input type="checkbox" name="product" value="油烟机" /> <span data-i18n="product1_name">油烟机</span></label>
+          <label class="checkbox-label"><input type="checkbox" name="product" value="燃气灶" /> <span data-i18n="product2_name">燃气灶</span></label>
+          <label class="checkbox-label"><input type="checkbox" name="product" value="消毒柜" /> <span data-i18n="product3_name">消毒柜</span></label>
+        </div>
+      </div>
+      <div class="form-group">
+        <label data-i18n="form_quantity">预计数量</label>
+        <select name="quantity">
+          <option value="" data-i18n="form_quantity_ph">请选择 / Select</option>
+          <option value="100-500" data-i18n="qty_100">100 - 500 台</option>
+          <option value="500-1000" data-i18n="qty_500">500 - 1,000 台</option>
+          <option value="1000-5000" data-i18n="qty_1000">1,000 - 5,000 台</option>
+          <option value="5000+" data-i18n="qty_5000">5,000+ 台</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label><span data-i18n="form_contact">WhatsApp / 微信 / LINE / Email</span> <span class="required" data-i18n="required">*</span></label>
+        <input type="text" name="contact" data-i18n-ph="form_contact_ph" placeholder="+66 xxx / 微信号 / LINE ID / Email" required />
+      </div>
+      <div class="form-group">
+        <label data-i18n="form_oem">是否需要 OEM</label>
+        <div class="radio-group">
+          <label class="radio-label"><input type="radio" name="oem" value="yes" /> <span data-i18n="form_oem_yes">是</span></label>
+          <label class="radio-label"><input type="radio" name="oem" value="no" /> <span data-i18n="form_oem_no">否</span></label>
+          <label class="radio-label"><input type="radio" name="oem" value="discuss" /> <span data-i18n="form_oem_discuss">待定，需沟通</span></label>
+        </div>
+      </div>
+      <div class="form-group">
+        <label data-i18n="form_notes">备注</label>
+        <textarea name="notes" rows="3" data-i18n-ph="form_notes_ph" placeholder="其他需求说明..."></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary btn-block btn-lg" data-i18n="form_submit">立即获取报价</button>
+    </form>
+    <div id="formSuccess" class="form-success" style="display:none;">
+      <div class="success-icon">&#10003;</div>
+      <h3 data-i18n="success_title">提交成功！</h3>
+      <p data-i18n="success_desc">我们将在 24 小时内通过 WhatsApp、微信或邮件联系您。</p>
+    </div>
+  </section>
+
+  <!-- ========== 底部固定悬浮按钮 ========== -->
+  <div class="bottom-bar" id="bottomBar">
+    <a href="https://wa.me/8613800000000" class="bottom-btn whatsapp" target="_blank" rel="noopener">
+      <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      <span data-i18n="bottom_whatsapp">WhatsApp</span>
+    </a>
+    <a href="javascript:void(0)" class="bottom-btn wechat-btn" onclick="openWechatModal()">
+      <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M8.691 2.188C3.891 2.188 0 5.476 0 9.53c0 2.212 1.17 4.203 3.002 5.55a.59.59 0 01.213.665l-.39 1.48c-.019.07-.048.141-.048.213 0 .163.13.295.29.295a.326.326 0 00.167-.054l1.903-1.114a.864.864 0 01.717-.098 10.16 10.16 0 002.837.403c.276 0 .543-.027.811-.05a6.105 6.105 0 01-.253-1.72c0-3.571 3.326-6.47 7.43-6.47.254 0 .504.013.75.037C16.633 4.762 12.995 2.188 8.691 2.188zM5.785 7.033a1.044 1.044 0 110 2.087 1.044 1.044 0 010-2.087zm5.813 0a1.044 1.044 0 110 2.087 1.044 1.044 0 010-2.087zM24 14.63c0-3.248-3.286-5.883-7.341-5.883-4.055 0-7.341 2.635-7.341 5.883s3.286 5.882 7.341 5.882c.868 0 1.699-.136 2.478-.357a.723.723 0 01.597.082l1.584.926a.272.272 0 00.139.045.241.241 0 00.24-.245c0-.06-.024-.118-.04-.176l-.326-1.233a.49.49 0 01.178-.553C22.965 18.354 24 16.608 24 14.63zm-9.341-1.104a.868.868 0 110 1.735.868.868 0 010-1.735zm4 0a.868.868 0 110 1.735.868.868 0 010-1.735z"/></svg>
+      <span data-i18n="bottom_wechat">微信</span>
+    </a>
+    <a href="https://line.me/ti/p/YOUR_LINE_ID" class="bottom-btn line-btn" target="_blank" rel="noopener">
+      <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596a.626.626 0 01-.22.04.636.636 0 01-.516-.27l-2.443-3.317v2.95c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.271.173-.508.43-.595a.672.672 0 01.222-.04c.2 0 .394.098.512.27l2.44 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-6.621 0c0 .344-.282.629-.63.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-2.466.629H4.297c-.349 0-.63-.285-.63-.629V8.108c0-.345.281-.63.63-.63.346 0 .627.285.627.63v4.141h1.496c.348 0 .63.285.63.63 0 .344-.282.629-.63.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
+      <span data-i18n="bottom_line">LINE</span>
+    </a>
+    <a href="#inquiry" class="bottom-btn quote">
+      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg>
+      <span data-i18n="bottom_quote">立即报价</span>
+    </a>
+  </div>
+
+  <!-- ========== Footer ========== -->
+  <footer class="footer">
+    <p class="footer-slogan"><span data-i18n="footer_slogan_1">东南亚厨电源头工厂</span><br/><span data-i18n="footer_slogan_2">支持油烟机、燃气灶、消毒柜 OEM/ODM 批量定制</span></p>
+    <div class="footer-links">
+      <a href="#products" data-i18n="footer_products">产品</a>
+      <a href="#factory" data-i18n="footer_factory">工厂</a>
+      <a href="#oem" data-i18n="footer_custom">定制</a>
+      <a href="#inquiry" data-i18n="footer_inquiry">询盘</a>
+    </div>
+    <p class="copyright">&copy; 2025 Kitchen Appliance Factory. All rights reserved.</p>
+  </footer>
+
+  <script src="i18n.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
