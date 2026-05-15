@@ -159,7 +159,7 @@ img { max-width: 100%; display: block; }
   position: relative;
   background:
     linear-gradient(180deg, rgba(17,17,19,0.55) 0%, rgba(17,17,19,0.92) 100%),
-    url('https://images.unsplash.com/photo-1765766601532-90e9b96320c8?w=800&q=80') center/cover no-repeat;
+    url('https://images.unsplash.com/photo-1717386255767-52643970d483?w=800&q=80') center/cover no-repeat;
 }
 
 .hero-overlay {
